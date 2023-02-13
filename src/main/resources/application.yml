@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: default
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo
+    hikari:
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: false
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+  data:
+    redis:
+      host: localhost
+      password: 123456
+      jedis:
+        pool:
+          enabled: true
+jwt:
+  key: demo
+  ttl: 300
